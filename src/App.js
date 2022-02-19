@@ -6,10 +6,9 @@ import { useState } from "react";
 import Alert from "./Components/Alert";
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
 Route,
   Switch,
-  Link
 } from "react-router-dom";
 
 function App(){
@@ -45,7 +44,7 @@ else
 return(
 
 <>
-<Router>
+<Router basename={process.env.PUBLIC_URL} >
  <Navbar title="Texttutils" abouttext = "About" Home="Home" mode={mode}  togglemode={togglemode}/>
  <Alert  alert ={alert}  />
  
